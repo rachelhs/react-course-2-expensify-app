@@ -9,7 +9,7 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json",
+    "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
     "start": "node server/server.js",
     "heroku-postbuild": "yarn run build:prod"
   },
@@ -24,6 +24,7 @@
     "css-loader": "^3.5.3",
     "express": "4.15.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "firebase": "^7.15.1",
     "moment": "2.18.1",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
@@ -37,6 +38,7 @@
     "react-redux": "5.0.5",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
     "uuid": "3.1.0",
@@ -44,6 +46,8 @@
     "webpack": "^4.43.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "enzyme": "3.0.0",
     "enzyme-adapter-react-16": "1.0.0",
     "enzyme-to-json": "3.0.1",
