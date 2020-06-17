@@ -22,7 +22,7 @@ const database = firebase.database();
 //     password
 // );
 database.ref().set('hello');
-export { firebase, database as default, googleAuthProvider };
+export { firebase, database as default };
 
 // database.ref('expenses')
 // .on('value', (snapshot) => {
